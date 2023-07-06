@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "lumache"
+version = "0.1.0"
+description = ""
+authors = ["HaoSha <hao.sha@careerbuilder.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+pytest = "^7.4.0"
+
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^7.0.1"
+furo = "^2023.5.20"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
