@@ -3,6 +3,9 @@
 install:
     poetry install
 
+install-with-docs:
+    poetry install --with docs
+
 clean:
     rm -rf .ipynb_checkpoints
     rm -rf **/.ipynb_checkpoints
@@ -12,15 +15,6 @@ clean:
     rm -rf **/.ruff_cache
     rm -rf __pycache__
     rm -rf **/__pycache__
-
-install-sphinx-in-docs-group:
-    poetry add sphinx --group docs
-
-initialize-sphinx:
-    poetry run sphinx-quickstart docs
-
-build-sphinx-for-the-first-time:
-    poetry run sphinx-build -b html docs/source/ docs/build/html
 
 format:
     poetry run black .
